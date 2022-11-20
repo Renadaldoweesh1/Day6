@@ -1,0 +1,32 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.println("enter number");
+        int num =s.nextInt();
+            check(num);
+
+        try {
+            int[] numbers = {1, 2, 3, 4, 5, 6, 7};
+            System.out.println(numbers[9]);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println(e.getMessage());
+
+        }
+
+
+    }
+    static void check(int num){
+        try {
+            if (num > 4) {
+                throw new Exception("InputMismatchException");
+            } else {
+                System.out.println("valid input");
+            }
+        } catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
+}
